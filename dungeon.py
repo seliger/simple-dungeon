@@ -68,6 +68,7 @@ def main() -> None:
     while game_active:
         exits: list = calculate_exits(game_map, current_position)
 
+        print(f"{game_map[current_position[1]][current_position[0]]['name']}")
         print(f'Possible exits are {", ".join(exits)}.')
         command = parse_command_words(input('> '))
 
